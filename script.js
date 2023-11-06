@@ -139,18 +139,28 @@ function timesUp() {
   scoreEl.textContent = "You got " + score + " out of 5!"; 
 };
 
-// Save score by providing the initials
+// Check if there is previous game record(s)
 function saveScore() {
+  var oldGameScores = localStorage.getItem("gameScore");
+  if (!oldGameScores) {
+    oldGameScores = []
+  } else {
+    oldGameScores = JSON.parse(oldGameScores)
+  };
   var gameScore = {
     enterInitial: enterInitial.value,
     score: score
   };
+
+  oldGameScores.push(gameScore);
+
+// Save score by providing the initials
   if (enterInitial.value === "") {
     alert("Unable to save score as no initials were provided.");
     return;
   } else {
     // Get initial and score and store it in local storage as a string
-    localStorage.setItem('gameScore', JSON.stringify(gameScore));
+    localStorage.setItem('gameScore', JSON.stringify(oldGameScores));
     // console.log(gameScore)
   }
 };
