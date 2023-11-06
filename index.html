@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <a href="./scores.html" id="view-score">View High Scores</a>
+        <div>
+            <span id="view-time">Time:</span>
+            <span id="time-count"></span>
+        </div>
+    </header>
+
+    <section id="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>Try to answer the following code-related questions within the time limit.<br>
+        Keep in mind that incorrect answer will penalize your score/time<br>by ten seconds.</p>
+        <button id="start">Start Quiz!</button>
+    </section>
+
+    <section id="question" class="hidden">
+        <h1 id="question-text"></h1>
+        <div class="choices">
+            <div class="choice-box" id="choice-1"></div>
+            <div class="choice-box" id="choice-2"></div>
+            <div class="choice-box" id="choice-3"></div>
+            <div class="choice-box" id="choice-4"></div>
+        </div>
+        <hr width="70%">
+        <div id="feedback"></div>
+    </section>
+
+    <section id="outro" class="hidden">
+        <form id="name-input">
+            <h2 id="result"></h2>
+            <label for="initials">Enter Initials: </label>
+            <input type="text" id="initials-box" name="initials"><br>
+            <button type="button" id="log-score">Submit!</button> 
+          </form>
+    </section>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
