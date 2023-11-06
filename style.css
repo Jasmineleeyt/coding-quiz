@@ -1,0 +1,108 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 20px;
+    width: 100%;
+}
+
+#view-score {
+    text-decoration: none;
+    color: rgb(203, 131, 203);
+    padding: 15px;
+}
+
+#view-time {
+    margin: 15px;
+}
+
+#intro, #question {
+    text-align: center;
+    margin: 15px;
+    font-size: 22px;
+}
+
+.choice-box {
+    background-color:  rgb(71, 20, 129);
+    color: white;
+    display: grid;
+    place-items: center;
+    height: 60px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 25px;
+}
+
+#start {
+    background-color: rgb(71, 20, 129);
+    color: white;
+    font-size: 18px;
+    height: 50px;
+    width: 120px;
+    border-radius: 8px;
+}
+
+.choice-box:hover, #start:hover, #log-score:hover, .score-btn:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+}
+
+.hidden {
+    display: none;
+}
+
+.choices {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+#feedback {
+    opacity: 0.6;
+    font-style: italic;
+}
+
+#name-input {
+    text-align: center;
+    padding: 25px;
+}
+
+#log-score {
+    margin: 20px;
+    background-color: rgb(71, 20, 129);
+    color: white;
+    font-size: 15px;
+    height: 30px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+/* Styles the score board page */
+.score-board {
+    text-align: center;
+    margin: 25px;
+    padding: 25px;
+    font-size: 22px;
+}
+
+#back-btn {
+    text-decoration: none;
+}
+
+.score-btn{
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgb(71, 20, 129);
+    color: white;
+}
